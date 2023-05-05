@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Govind Pathak - Portfolio</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="hero">
+			<h1>Govind Pathak</h1>
+			<h2>Web Developer</h2>
+			<a href="https://www.linkedin.com/in/1gp" target="_blank"><i class="fab fa-linkedin"></i></a>
+			<a href="https://github.com/aadityapathak" target="_blank"><i class="fab fa-github"></i></a>
+		</div>
+	</header>
+
+	<main>
+		<section id="about">
+			<h2>About Me</h2>
+			<p>Seeking job opportunities where commitment and contribution to the organization drives the growth of an individual. Aspiring to utilize my cognitive skills to the maximum while contributing to achieve the organization excellence.</p>
+			<p>Currently pursuing Bachelor of Technology with CSE at Future Institute of Engg. &amp; Tech. Bareilly, India.</p>
+		</section>
+
+		<section id="education">
+			<h2>Education</h2>
+			<ul>
+				<li>
+					<h3>Bachelor of Technology with CSE</h3>
+					<p>Future institute of Engg. &amp; Tech. Bareilly, India</p>
+					<p>2020 – present</p>
+				</li>
+				<li>
+					<h3>Diploma in CSE</h3>
+					<p>Government Polytechnic College Shahjahanpur Shahjahanpur, India</p>
+					<p>06/2017 – 05/2020</p>
+				</li>
+			</ul>
+		</section>
+
+		<section id="projects">
+			<h2>Projects</h2>
+			<ul>
+				<li>
+					<h3>Employee Interests Survey form</h3>
+					<p>It helps employers to ask their employees about their interest</p>
+					<p>Using Html, Css, Javascript</p>
+				</li>
+				<li>
+					<h3>Todo List</h3>
+					<p>It lets you make large and overwhelming projects manageable.</p>
+					<p>Using Html, Css, Javascript</p>
+				</li>
+				<li>
+					<h3>City Tutor</h3>
+					<p>Website helps student to find tutors</p>
+					<p>Using Html, Css, Javascript, Php, Bootstrap, Mysqli</p
+
+                    </li>
+                </ul>
+            </section>
+        
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>C</li>
+                    <li>PHP</li>
+                    <li>Core Java</li>
+                    <li>Web Development</li>
+                    <li>Wordpress</li>
+                    <li>Bootstrap</li>
+                </ul>
+            </section>
+        
+            <section id="tools">
+                <h2>Tools</h2>
+                <ul>
+                    <li>Github</li>
+                    <li>VS Code</li>
+                    <li>Eclipse</li>
+                    <li>Windows</li>
+                </ul>
+            </section>
+        
+            <section id="courses">
+                <h2>Courses</h2>
+                <ul>
+                    <li>Html, Sololearn</li>
+                    <li>Java Programming: Solving Problems with Software, Duke University at Coursera</li>
+                </ul>
+            </section>
+        
+            <section id="interests">
+                <h2>Interests</h2>
+                <ul>
+                    <li>Reading Books</li>
+                    <li>Playing Chess</li>
+                    <li>Travelling</li>
+                </ul>
+            </section>
+        
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <ul>
+                    <li>Email: govindpathak179211@gmail.com</li>
+                    <li>Phone: +91-8009765540</li>
+                </ul>
+            </section>
+        </main>
+        
+        <footer>
+            <section id="subscribe">
+                <h2>Subscribe to our Newsletter</h2>
+                <form>
+                  <label for="email">Email Address:</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                  <button type="submit" id="submit-btn">Subscribe</button>
+                </form>
+                <p id="message"></p>
+              </section>
+              
+              <script>
+                const form = document.querySelector('form');
+const emailInput = document.querySelector('#email');
+const message = document.querySelector('#message');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // validate email format
+  const email = emailInput.value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    message.textContent = 'Please enter a valid email address';
+    message.style.color = 'red';
+    emailInput.focus();
+    return;
+  }
+
+  // TODO: send email using email service API
+  message.textContent = `Thanks for subscribing, ${email}!`;
+  message.style.color = '#007bff';
+  emailInput.value = '';
+});
+
+              </script>
+            <p>&copy; 2023 Govind Pathak</p>
+        </footer>
+        
+        <script src="script.js"></script>
+    </body>
+    </html>
